@@ -1,0 +1,53 @@
+{
+  "name": "puzzle-cli",
+  "appName": "Puzzle Framework CLI interface",
+  "version": "0.1.0",
+  "description": "CLI Tool for Puzzle Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint ./src puzzle",
+    "lint-fix": "./node_modules/.bin/eslint --fix ./src puzzle",
+    "jsdoc": "./node_modules/.bin/jsdoc -p -c ./jsdoc.json ./src puzzle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spark-development/puzzle-cli.git"
+  },
+  "bin": {
+    "puzzle": "./puzzle"
+  },
+  "keywords": [
+    "puzzle-framework",
+    "cli-tool",
+    "puzzle-cli"
+  ],
+  "author": "Spark Development (office@sparkdigital.studio)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spark-development/puzzle-cli/issues"
+  },
+  "homepage": "https://github.com/spark-development/puzzle-cli#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cli": "^1.0.1",
+    "download": "^7.0.0",
+    "rmfr": "^2.0.0"
+  },
+  "devDependencies": {
+    "debug": "^3.1.0",
+    "eslint": "^4.19.1",
+    "eslint-bamboo-formatter": "0.1.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-chai-expect": "^1.1.1",
+    "eslint-plugin-import": "^2.11.0",
+    "husky": "^1.0.0-rc.2",
+    "ink-docstrap": "^1.3.2",
+    "jsdoc": "^3.5.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
